@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>FlyBy-DroneStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+        <div class="animation">
+            <img id="drone" src="images/drone-icon2.jpg">
+        </div>
+
+        <a><img id="start-image" src="images/Drona2.jpg"></a>
+
+        <span id="title"><img src="images/title1.png" ></span> 
+
+        <nav class="nav-bar" id="nav_bar">
+            <ul></ul> <!-- dummy -->
+
+            <ul class="menu" id="menu">
+               
+                <li>Acasa</li>
+                <li class="dropdown"> 
+                    <span>Drone</span>
+                    <ul>
+                        <li>Drona1</li>
+                        <li>Drona2</li>
+                        <li>Drona3</li>
+                    </ul>
+                </li>
+                <li>Contact</li>
+            </ul>
+
+            <ul class="icons">
+                <li><img id="search" src="images/search.png"></li>
+                <li><img id="user" src="images/user.png"></li>
+                <li><img id="shopping-cart" src="images/shopping-cart.png"></li>
+              
+            </ul>
+        </nav>
+       
+    </header>
+
+    <script>
+        window.addEventListener("scroll",()=>{
+            if(window.pageYOffset!=0)
+            {
+                nav_bar.style.transition = "background-color 500ms";
+                nav_bar.style.background = "white";
+                menu.style.color = "black";
+            }
+            else{
+                nav_bar.style.background = "rgba(255,255,255,0)";
+                menu.style.transition = "color 500ms"
+                menu.style.color = "white";
+            }
+        })
+
+        window.addEventListener("load",()=>{
+            title.style.transition = "opacity 1.5s";
+            title.style.opacity = "0.8";
+
+
+            menu.style.transition = "opacity 1.5s";
+            menu.style.opacity = "1";
+
+            menu.style.transition = "color 1.5s"
+            menu.style.color = "white";
+
+        })
+
+
+    </script>
+      
+
+ 
+    <footer>
+        <p>&copy; 2024 Drone Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
